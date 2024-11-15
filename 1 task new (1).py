@@ -69,7 +69,7 @@ for a in range(k):
 J_= J.reshape(k * u, k * u)
 
 start = time()
-sol = pq.solve(J_, number_of_runs=100, number_of_steps=200, return_samples=False, verbose=30)
+sol = pq.solve(J_, number_of_runs=50, number_of_steps=200, return_samples=False, verbose=30)
 # print(sol.vector, sol.objective)
 # print(len(sol.vector))
 np.savetxt("vector.txt", sol.vector, fmt='%d')
@@ -97,7 +97,7 @@ sum = 0
 for a in range(k):
     sum = sum + n[a]*A[a]
 
-print("Прибыль: ", sum1, "$")
+print("Прибыль: ", sum, "$")
 
 sigma = 0
 for a in range(k):
